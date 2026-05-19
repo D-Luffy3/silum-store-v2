@@ -373,7 +373,7 @@ export default function HomePage() {
 
       {/* SECTION 2: All Products (Staggered Grid Fade-In) */}
       <section className="py-20 md:py-28 border-b border-white/5 bg-zinc-950/40">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 md:px-[8%] mx-auto">
           
           <div className="flex flex-col items-center text-center mb-16 space-y-4">
             <span className="text-[10px] tracking-[0.3em] font-mono text-zinc-500 uppercase">ARCHIVE AND EXHIBITS</span>
@@ -443,14 +443,14 @@ export default function HomePage() {
 
       {/* SECTION 3: Categories (Parallax Grid Layout) */}
       <section ref={categoryGridRef} className="py-20 md:py-28 border-b border-white/5 relative overflow-hidden bg-zinc-950/20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16 text-center space-y-4">
+        <div className="w-full px-4 md:px-[8%] mx-auto mb-16 text-center space-y-4">
           <span className="text-[10px] tracking-[0.3em] font-mono text-zinc-500 uppercase">PRODUCT SPECTRUMS</span>
           <h2 className="text-3xl font-medium tracking-widest text-white uppercase">Categories Spectrum</h2>
           <p className="text-sm text-zinc-500 font-light max-w-md mx-auto">Different expressions of tailoring and shape designed for active integration.</p>
         </div>
 
         {/* Parallax Category Blocks */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="w-full px-4 md:px-[8%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Card 1: Capsule */}
           <motion.div 
