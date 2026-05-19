@@ -37,9 +37,29 @@ export const Navbar: React.FC = () => {
     <>
       <header className="sticky top-0 z-40 w-full border-b border-zinc-200/50 dark:border-white/5 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md transition-colors duration-300">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-16 items-center justify-between relative">
+            {/* Mobile Left Actions (Hamburger + Theme Toggle) */}
+            <div className="flex items-center gap-1 md:hidden z-10">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+                aria-label="Toggle Menu"
+              >
+                {isOpen ? <X size={18} /> : <Menu size={18} />}
+              </button>
+              {mounted && (
+                <button
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+                  aria-label="Toggle theme"
+                >
+                  {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                </button>
+              )}
+            </div>
+
             {/* Logo */}
-            <div className="flex">
+            <div className="flex md:static absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 z-10">
               <Link href="/" className="flex items-center">
                 <span className="text-xl font-bold tracking-[0.3em] uppercase text-zinc-900 dark:text-white hover:opacity-85 transition-opacity font-display">
                   Silum
@@ -76,7 +96,7 @@ export const Navbar: React.FC = () => {
             </nav>
 
             {/* Icons */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1 md:gap-3 z-10">
               {/* Search Toggle */}
               <button
                 onClick={() => setIsSearchOpen(true)}
@@ -86,11 +106,11 @@ export const Navbar: React.FC = () => {
                 <Search size={18} />
               </button>
 
-              {/* Theme Toggle (Client Safe) */}
+              {/* Theme Toggle (Desktop Only) */}
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+                  className="hidden md:block p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
                   aria-label="Toggle theme"
                 >
                   {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
@@ -113,15 +133,6 @@ export const Navbar: React.FC = () => {
                     {cartCount}
                   </motion.span>
                 )}
-              </button>
-
-              {/* Mobile Menu Toggle */}
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors md:hidden"
-                aria-label="Toggle Menu"
-              >
-                {isOpen ? <X size={18} /> : <Menu size={18} />}
               </button>
             </div>
           </div>

@@ -377,34 +377,17 @@ export default function HomePage() {
           
           <div className="flex flex-col items-center text-center mb-16 space-y-4">
             <span className="text-[10px] tracking-[0.3em] font-mono text-zinc-500 uppercase">ARCHIVE AND EXHIBITS</span>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-widest text-white uppercase">All Products</h2>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-widest text-white uppercase">Products</h2>
             <div className="h-[2px] w-12 bg-white/20 rounded" />
-            
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap justify-center gap-2 pt-6">
-              {categoriesList.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`px-4 py-2 text-xs font-mono tracking-widest rounded-lg border transition-all uppercase ${
-                    activeCategory === category
-                      ? 'bg-white text-black border-white'
-                      : 'bg-zinc-900/60 text-zinc-400 border-white/5 hover:border-white/10 hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Staggered Grid Container */}
           <motion.div 
             layout 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-10"
           >
             <AnimatePresence mode="popLayout">
-              {filteredProducts.map((product, index) => (
+              {products.map((product, index) => (
                 <motion.div
                   key={product.id}
                   layout

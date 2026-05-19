@@ -178,57 +178,65 @@ export const NewsletterModal: React.FC = () => {
               </div>
 
               {/* Right Column: Content */}
-              <div className="col-span-12 md:col-span-7 p-8 md:p-12 flex flex-col justify-center">
+              <div className="col-span-12 md:col-span-7 p-5 md:p-8 flex flex-col justify-center">
                 {!submitted ? (
                   <>
-                    <div className="flex items-center gap-2 mb-4">
+                    <div className="flex items-center gap-2 mb-2">
                       <span className="h-px w-6 bg-amber-500/50" />
                       <span className="text-[10px] tracking-[0.3em] font-mono text-amber-600 dark:text-amber-500 uppercase font-semibold">
                         Exclusive Access
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-medium tracking-wide mb-2 uppercase font-display">
+                    <h3 className="text-xl md:text-2xl font-medium tracking-wide mb-1.5 uppercase font-display">
                       Join the Silum Club
                     </h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 text-sm font-light leading-relaxed mb-6">
+                    <p className="text-zinc-600 dark:text-zinc-400 text-xs md:text-sm font-light leading-relaxed mb-4">
                       Unlock elite access to capsules, private releases, and receive an instant <strong className="text-zinc-900 dark:text-white font-medium">{discountRate}% discount code</strong> on your first order.
                     </p>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-2.5">
                       <div className="relative">
-                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500" size={18} />
+                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500" size={16} />
                         <input
                           type="email"
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="Enter your email address"
-                          className="w-full pl-12 pr-4 py-3.5 bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-white/10 rounded-xl text-zinc-900 dark:text-white placeholder-zinc-500 text-sm focus:border-zinc-400 dark:focus:border-white/30 focus:outline-none transition-colors"
+                          className="w-full pl-11 pr-4 py-2.5 bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-white/10 rounded-xl text-zinc-900 dark:text-white placeholder-zinc-500 text-sm focus:border-zinc-400 dark:focus:border-white/30 focus:outline-none transition-colors"
                         />
                       </div>
 
                       <button
                         type="submit"
                         disabled={loading}
-                        className="w-full py-3.5 bg-zinc-900 dark:bg-white text-white dark:text-black font-semibold rounded-xl text-sm tracking-widest uppercase hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2"
+                        className="w-full py-2.5 bg-zinc-900 dark:bg-white text-white dark:text-black font-semibold rounded-xl text-xs md:text-sm tracking-widest uppercase hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2"
                       >
                         {loading ? (
                           <span className="w-5 h-5 border-2 border-white dark:border-black border-t-transparent rounded-full animate-spin" />
                         ) : (
                           <>
-                            <Sparkles size={16} />
+                            <Sparkles size={14} />
                             Receive {discountRate}% Off
                           </>
                         )}
                       </button>
 
+                      <button
+                        type="button"
+                        onClick={handleClose}
+                        className="text-[9px] md:text-[10px] tracking-widest font-mono text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white uppercase underline underline-offset-4 py-1 transition-colors text-center"
+                      >
+                        No thanks, I&apos;ll pay full price
+                      </button>
+
                       {errorMsg && (
-                        <p className="text-red-500 text-xs font-mono tracking-wider">{errorMsg}</p>
+                        <p className="text-red-500 text-xs font-mono tracking-wider text-center">{errorMsg}</p>
                       )}
 
-                      <p className="text-[10px] text-zinc-500 text-center font-mono tracking-wider">
-                        BY SUBSCRIBING, YOU AGREE TO OUR PRIVACY POLICY. DISMISS AT ANY TIME.
+                      <p className="text-[9px] text-zinc-500 text-center font-mono tracking-wider mt-1">
+                        BY SUBSCRIBING, YOU AGREE TO OUR PRIVACY POLICY.
                       </p>
                     </form>
                   </>
