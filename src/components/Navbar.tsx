@@ -29,6 +29,7 @@ export const Navbar: React.FC = () => {
 
   const navItems = [
     { label: 'Shop', href: '/' },
+    { label: 'Collection', href: '/collection' },
     { label: 'Portal', href: '/portal-secure', badge: profile?.role && profile.role !== 'customer' ? profile.role : undefined },
   ];
 

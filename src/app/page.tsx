@@ -265,7 +265,7 @@ export default function HomePage() {
           <img
             src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2000&auto=format&fit=crop"
             alt="Silum Hero Banner"
-            className="w-full h-full object-cover grayscale brightness-40 contrast-105"
+            className="w-full h-full object-cover brightness-40 contrast-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-90" />
         </div>
@@ -334,7 +334,7 @@ export default function HomePage() {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700"
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-all duration-700"
                   />
                   {/* Quick add and hover interactions */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
@@ -419,7 +419,7 @@ export default function HomePage() {
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-700"
+                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-all duration-700"
                       />
                       
                       {/* Interaction Overlay */}
@@ -478,7 +478,7 @@ export default function HomePage() {
             <img
               src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop"
               alt="Capsule Category"
-              className="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 z-10" />
             
@@ -505,7 +505,7 @@ export default function HomePage() {
             <img
               src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop"
               alt="Signature Category"
-              className="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 z-10" />
             

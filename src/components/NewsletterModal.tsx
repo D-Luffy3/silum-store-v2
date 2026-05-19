@@ -117,7 +117,7 @@ export const NewsletterModal: React.FC = () => {
             exit={{ opacity: 0, x: 100, scale: 0.9 }}
             whileHover={{ scale: 1.03 }}
             onClick={() => setIsModalOpen(true)}
-            className="fixed bottom-6 right-6 z-40 flex items-center gap-3 p-4 bg-zinc-900/90 dark:bg-white/95 text-white dark:text-zinc-950 backdrop-blur-md rounded-2xl border border-white/10 dark:border-zinc-200/50 shadow-2xl cursor-pointer select-none group transition-all font-mono"
+            className="fixed bottom-24 right-6 md:bottom-6 md:right-24 z-40 flex items-center gap-3 p-4 bg-zinc-900/90 dark:bg-white/95 text-white dark:text-zinc-950 backdrop-blur-md rounded-2xl border border-white/10 dark:border-zinc-200/50 shadow-2xl cursor-pointer select-none group transition-all font-mono"
           >
             <div className="p-2 rounded-xl bg-white/10 dark:bg-zinc-900/10 text-white dark:text-zinc-950 flex items-center justify-center">
               <Percent size={16} className="animate-bounce" />
@@ -164,7 +164,7 @@ export const NewsletterModal: React.FC = () => {
                 <img
                   src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop"
                   alt="Silum Editorial"
-                  className="absolute inset-0 w-full h-full object-cover grayscale brightness-90 hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover brightness-90 hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-950 via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-6 left-6 right-6">

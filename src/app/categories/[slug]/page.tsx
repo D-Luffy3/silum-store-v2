@@ -195,7 +195,7 @@ export default function CategoryPage() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-700"
+                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-all duration-700"
                     />
                     
                     {/* Interaction Overlay */}
